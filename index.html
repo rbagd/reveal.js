@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>What can you learn from reading?</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -12,12 +12,367 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+				text-transform: none;
+			}
+
+			.box1 {
+				padding-left: 15px;
+				padding-right: 15px;
+				border: 2px solid white;
+				overflow:hidden;
+			}
+
+			.container{
+    			display: flex;
+			}
+
+			.col{
+ 			   flex: 1;
+			}
+
+			.vertical_line2 {
+				content: "";
+				position: fixed;
+				top: 0px;
+				left: 50%; 
+				bottom: 0px;
+				transform: translateX(-50%); 
+				width: 2px;
+				color: #fff;
+				border-left: 4px solid yellow;
+				border-right: 4px solid white;
+			}
+
+
+			body .entries {
+				width: calc(100% - 80px);
+				max-width: 800px;
+				margin: auto;
+				position: relative;
+				left: -5px;
+				}
+			
+			body .entries .entry {
+				width: calc(50% - 80px);
+				float: left;
+				padding: 20px;
+				clear: both;
+				text-align: right;
+			}
+			
+			body .entries .entry:not(:first-child) {
+				margin-top: -60px;
+			}
+
+			body .entries .entry .title {
+				font-size: 38px;
+				font-weight: 800;
+				margin-bottom: 8px;
+				position: relative;
+				color: white;
+			}
+
+			body .entries .entry .title:before {
+				content: "";
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				border: 4px solid #ffffff;
+				background-color: #1D1D1D;
+				border-radius: 100%;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -73px;
+				z-index: 1000;
+			}
+
+			body .entries .entry .title.big:before {
+				width: 24px;
+				height: 24px;
+				transform: translate(8px, -50%);
+			}
+
+			body .entries .entry .body {
+				color: white;
+				font-size: x-large;
+				font-weight: bold;
+			}
+
+			body .entries .entry .body p {
+				line-height: 1.4em;
+			}
+
+			body .entries .entry:nth-child(2n) {
+				text-align: left;
+				float: right;
+			}
+
+			body .entries .entry:nth-child(2n) .title:before {
+				left: -63px;
+			}
+			
+			body .entries .entry:nth-child(2n) .title.big:before {
+				transform: translate(-8px, -50%);
+			}
+
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-background="images/book_shelve.jpg" data-state="dimbg" id="title">
+					<h3 style="font-family: monospace;" class="r-fit-text">What can you learn from reading?</h3>
+				</section>
+
+				<section id="no-five-senses" data-auto-animate>
+					<img src="images/sensor_input.jpg" />
+					<p class="r-fit-text">
+						What if we only learnt about our surroundings from reading?
+					</p>
+				</section>
+
+				<section id="no-five-senses2" data-auto-animate>
+					<p class="r-fit-text">
+						What if we only learnt about our surroundings from reading?
+					</p>
+				</section>
+
+				<section id="training1" data-auto-animate>
+					<h3 data-id="spolter">spolter</h3>
+				</section>
+
+				<section id="training2" data-auto-animate>
+					<p data-id="spolter">
+						I went to the kitchen to grab a <b style="color: red;">spolter</b>.
+					</p>
+				</section>
+				
+				<section id="training3" data-auto-animate>
+					<p data-id="spolter">
+						As I was pressing oranges, <b style="color: red;">spolter</b> fell out of my hand.
+					</p>
+				</section>
+
+				<section id="training4" data-auto-animate>
+					<p class="r-fit-text" data-id="oranges">
+						I saw oranges lying in the kitchen with a <span class="box1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> next to it.
+					</p>
+				</section>
+
+				<section id="training5" data-auto-animate>
+					<p class="r-fit-text" data-id="oranges">
+						I saw oranges lying in the kitchen with a <span class="box1"><b style="color: red;">spolter (?)</b></span> next to it.
+					</p>
+				</section>
+
+				<section style="text-align: left;" id="define-model">
+						<p class="r-fit-text">It is a hypothetical <b style="color: steelblue;">simplification</b> of the <b style="color: steelblue;">world</b>.</p>
+						<p class="fragment r-fit-text" style="margin-left: 50px">Such a <b style="color: steelblue;"> simple world</b> in science is called a <b style="color: red;">model</b>.</p>
+						<p class="fragment r-fit-text" style="margin-left: 100px">In this particular case, a <b style="color: red;">natural language model</b>.</p>
+				</section>
+
+				<section style="text-align: left;" id="nlu_nlg" data-auto-animate>
+					<p style="margin-bottom: 100px"><b style="color: red;">Natural language models</b> are split in two forms.</p>
+			
+					<div class="container">
+						<div class="col fragment fade-in-then-out" style="padding: 15px 15px 15px 15px; border: 1px solid #ffffff;">
+						<h3 style="color: lightgreen;">Understanding text</h3>
+						<ul style="color: azure;">
+							<li>Language detection</li>
+							<li>Sentiment analysis</li>
+							<li>Translation</li>
+							<li>...</li>
+						</ul>
+						</div>
+
+						<div class="col fragment" style="padding: 15px 0px 15px 15px; border: 1px solid #ffffff">
+						<h3 style="color: lightgreen;">Generating text</h3>
+						<ul style="color: azure;">
+							<li>Chatbots</li>
+							<li>Article writing</li>
+							<li>...</li>
+						</ul>
+						</div>
+					</div>
+
+				</section>
+
+				<section data-auto-animate id="nlg2">
+					<h3 style="color: lightgreen;">Generating text</h3> </br>
+					(or <b style="color: red;">natural language generation</b>)
+				</section>
+
+				<section data-auto-animate style="text-align: left;">
+					Human would take <b style="color: red;">30 years</b> to read an entire English Wikipedia.
+				</section>
+
+				<section data-auto-animate style="text-align: left;">
+					GPT-3 language model took <b style="color: red;">7 hours</b> to read an entire English Wikipedia and kept reading for <b style="color: steelblue;">34 days</b>.
+				</section>
+
+				<section style="text-align: left;" data-auto-animate id="rnn_2011">
+					<h3>RNN, 2011</h3>
+					<div class="r-stretch">
+					<p>
+		          	<b style="background-color: #FFE800; color: black;">&nbsp;The meaning of
+		            life&nbsp;</b> is the tradition of the ancient human
+		            reproduction: it is less favorable to the good boy for
+		            when to remove her bigger. In the show's agreement
+		            unanimously resurfaced. [...]
+					<!-- The wild pasteured with
+		            consistent street forests were incorporated by the 15th
+		            century BE. [...]  -->
+					</p>
+					</div>
+				</section>
+
+				<section id="nlp_revolution" class="vertical_line" data-background="images/revolution.jpg">
+					
+					<div class="entries">
+					
+					<div class="entry">
+						<div class="title">2011</div>
+						<div class="body">
+						<p>RNN</p>
+						</div>
+					</div>
+
+					<div class="entry">
+						<div class="title">&nbsp;</div>
+					</div>
+
+					<div class="entry">
+						<div class="title">&nbsp;</div>
+					</div>
+
+					<div class="entry">
+						<div class="title">&nbsp;</div>
+					</div>
+						
+					<div class="entry">
+						<div class="title big">2017</div>
+						<div class="body">
+				        <p>New class of natural language models.</br> Dawn of the <b style="color: yellow;">transformer</b> era.</p>
+						</div>
+					</div>
+					
+					<div class="entry">
+						<div class="title big">2018</div>
+						<div class="body">
+						<p>Google BERT</p>
+						</div>
+					</div>
+
+					<div class="entry">
+						<div class="title">2019</div>
+						<div class="body">
+						<p>GPT-2</p>
+						</div>
+					</div>
+
+					<div class="entry">
+						<div class="title big">2020</div>
+						<div class="body">
+						<p>GPT-3</p>
+						</div>
+					</div>
+
+					</div>
+
+					</section>
+
+				<section style="text-align: left;" data-auto-animate id="gpt3_2020">
+					<h3>GPT-3 Large, 2020</h3>
+					<div class="r-stretch">
+						<div class="r-fit-text">
+						<p style="background-color: #FFE800; color: black;">
+							&nbsp;Title: United Methodists Agree to Historic Split </br>
+							&nbsp;Subtitle: Those who oppose gay marriage will form their own denomination&nbsp;</br>
+							&nbsp;Article:
+						</p>
+						</div>
+						<p>
+						After two days of intense debate, the United Methodist Church has
+						agreed to a historic split - one that is expected to end in the
+						creation of a new denomination, one that will be "theologically and
+						socially conservative," according to The Washington Post. [...]
+						<!-- The
+						majority of delegates attending the church's annual General
+						Conference in May voted to strengthen a ban on the ordination of
+						LGBTQ clergy and to write new rules that will "discipline" clergy who
+						officiate at same-sex weddings. But those who opposed these measures
+						have a new plan: They say they will form a separate denomination by
+						2020, calling their church the Christian Methodist denomination. [...] -->
+						</p>
+					</div>
+				</section>
+
+				<section id="humans_can_recognize_gpt3" data-transition="zoom">
+					<p style="font-size: 150px;">
+						52 %
+					</p>
+				</section>
+
+				<section style="text-align: left;" id="octopus-test">
+					<div class="container">
+						<div class="col">
+							<h2>Octopus test</h2>
+						</div>
+						<div class="col" style="text-align: right; color: lightgreen; font-size: 100px;">
+							✔
+						</div>
+					</div>
+					<img src="images/octopus_test_pass.png">
+					<!--
+						<p style="font-size: xx-large;">
+						Two people Alice and Bob live alone on remote islands, but communicate with each
+						other in text messages through a trans-oceanic cable. Oscar,
+						hyper-intelligent octopus, sitting on the ocean floor, taps the cable and
+						listens in on their conversations for an indeterminate period. Eventually, Oscar
+						gets lonely and decides to interpose on the conversation, cutting off Bob and
+						impersonating their replies to Alice. The question is whether Oscar can keep up the
+						charade indefinitely without eventually raising Alice's suspicions.
+						</p>
+				    -->
+				</section>
+
+				<section style="text-align: left;">
+					Suppose Alice is suddenly chased by an angry bear, grabs a
+					stick to defend herself, and asks Bob for advice.
+				</section>
+
+				<section style="text-align: left;" id="octopus-test-fail">
+					<div class="container">
+						<div class="col">
+							<h2>Octopus test</h2>
+						</div>
+						<div class="col" style="text-align: right; color: red; font-size: 100px;">
+							&#9940;
+						</div>
+					</div>
+
+					<img src="images/octopus_test_fail.png">
+				</section>
+			
+				<!--
+				<section>
+					And what about <b style="color: green";>sarcasm</b>, <b style="color: steelblue;">irony</b>, <b style="color: tomato">humor</b> ?..
+				</section>
+				-->
+
+				<section id="meaning_from_form">
+					We are unable to learn <b style="color: green;">meaning</b> from <b style="color: red;">form</b>.
+				</section>
+
+				<section id="avocado_chair">
+					<p style="background-color: yellow; color: black; text-align: left;">&nbsp;an armchair in the shape of an avocado</p>
+					<img src="images/avocado_chair.jpg">
+				</section>
+
 			</div>
 		</div>
 
@@ -35,6 +390,16 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+
+			window.addEventListener("mousedown", handleClick, false);
+			window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+
+			function handleClick(e) {
+				e.preventDefault();
+				if(e.button === 0) Reveal.next(); 
+				if(e.button === 2) Reveal.prev(); 
+			}
+
 		</script>
 	</body>
 </html>
