@@ -46,6 +46,18 @@
 				border-right: 4px solid white;
 			}
 
+			body .entries:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 50.4%;
+				width: 3px;
+				height: 100vh;
+				background-color: white;
+				z-index: -5;
+			}
 
 			body .entries {
 				width: calc(100% - 80px);
@@ -118,6 +130,15 @@
 				transform: translate(-8px, -50%);
 			}
 
+			.author {
+				text-align: right;
+				font-family: monospace;
+				font-weight: bold;
+				font-stretch: condensed;
+				opacity: 0.6;
+				text-shadow: 2px 2px black;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -125,7 +146,10 @@
 			<div class="slides">
 
 				<section data-background="images/book_shelve.jpg" data-state="dimbg" id="title">
-					<h3 style="font-family: monospace;" class="r-fit-text">What can you learn from reading?</h3>
+					<h3 style="font-family: monospace; text-shadow: 2px 2px black;" class="r-fit-text">What can you learn from reading?</h3>
+					<div class="author">
+						<p style="margin-top: 100px">Rytis Bagdžiūnas</p>
+					</div>
 				</section>
 
 				<section id="no-five-senses" data-auto-animate>
@@ -141,32 +165,36 @@
 					</p>
 				</section>
 
-				<section id="training1" data-auto-animate>
-					<h3 data-id="spolter">spolter</h3>
-				</section>
+				<section>
 
-				<section id="training2" data-auto-animate>
-					<p data-id="spolter">
-						I went to the kitchen to grab a <b style="color: red;">spolter</b>.
-					</p>
-				</section>
+					<section id="training1">
+						<h3>spolter</h3>
+					</section>
+
+					<section id="training2">
+						<p>
+							I went to the kitchen to grab a <b style="color: red;">spolter</b>.
+						</p>
+					</section>
 				
-				<section id="training3" data-auto-animate>
-					<p data-id="spolter">
-						As I was pressing oranges, <b style="color: red;">spolter</b> fell out of my hand.
-					</p>
-				</section>
+					<section id="training3">
+						<p>
+							As I was pressing oranges, <b style="color: red;">spolter</b> fell out of my hand.
+						</p>
+					</section>
 
-				<section id="training4" data-auto-animate>
-					<p class="r-fit-text" data-id="oranges">
-						I saw oranges lying in the kitchen with a <span class="box1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> next to it.
-					</p>
-				</section>
+					<section id="training4">
+						<p class="r-fit-text" data-id="oranges">
+							I saw oranges lying in the kitchen with a <span class="box1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> next to it.
+						</p>
+					</section>
 
-				<section id="training5" data-auto-animate>
-					<p class="r-fit-text" data-id="oranges">
-						I saw oranges lying in the kitchen with a <span class="box1"><b style="color: red;">spolter (?)</b></span> next to it.
-					</p>
+					<section id="training5">
+						<p class="r-fit-text" data-id="oranges">
+							I saw oranges lying in the kitchen with a <span class="box1"><b style="color: red;">spolter (?)</b></span> next to it.
+						</p>
+					</section>
+
 				</section>
 
 				<section style="text-align: left;" id="define-model">
@@ -256,7 +284,7 @@
 					<div class="entry">
 						<div class="title big">2017</div>
 						<div class="body">
-				        <p>New class of natural language models.</br> Dawn of the <b style="color: yellow;">transformer</b> era.</p>
+				        <p>New class of language models.</br> Dawn of the <b style="color: yellow;">transformer</b> era.</p>
 						</div>
 					</div>
 					
@@ -317,16 +345,18 @@
 					</p>
 				</section>
 
-				<section style="text-align: left;" id="octopus-test">
-					<div class="container">
-						<div class="col">
-							<h2>Octopus test</h2>
+				<section>
+
+					<section style="text-align: left;" id="octopus-test">
+						<div class="container">
+							<div class="col">
+								<h2>Octopus test</h2>
+							</div>
+							<div class="col" style="text-align: right; color: lightgreen; font-size: 100px;">
+								✔
+							</div>
 						</div>
-						<div class="col" style="text-align: right; color: lightgreen; font-size: 100px;">
-							✔
-						</div>
-					</div>
-					<img src="images/octopus_test_pass.png">
+						<img src="images/octopus_test_pass.png">
 					<!--
 						<p style="font-size: xx-large;">
 						Two people Alice and Bob live alone on remote islands, but communicate with each
@@ -338,26 +368,28 @@
 						charade indefinitely without eventually raising Alice's suspicions.
 						</p>
 				    -->
-				</section>
+					</section>
 
-				<section style="text-align: left;">
-					Suppose Alice is suddenly chased by an angry bear, grabs a
-					stick to defend herself, and asks Bob for advice.
-				</section>
+					<section style="text-align: left;">
+						Suppose Alice is suddenly chased by an angry bear, grabs a
+						stick to defend herself, and asks Bob for advice.
+					</section>
 
-				<section style="text-align: left;" id="octopus-test-fail">
-					<div class="container">
-						<div class="col">
-							<h2>Octopus test</h2>
+					<section style="text-align: left;" id="octopus-test-fail">
+						<div class="container">
+							<div class="col">
+								<h2>Octopus test</h2>
+							</div>
+							<div class="col" style="text-align: right; color: red; font-size: 100px;">
+								&#9940;
+							</div>
 						</div>
-						<div class="col" style="text-align: right; color: red; font-size: 100px;">
-							&#9940;
-						</div>
-					</div>
 
-					<img src="images/octopus_test_fail.png">
+						<img src="images/octopus_test_fail.png">
+					</section>
+
 				</section>
-			
+
 				<!--
 				<section>
 					And what about <b style="color: green";>sarcasm</b>, <b style="color: steelblue;">irony</b>, <b style="color: tomato">humor</b> ?..
@@ -386,6 +418,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				navigationMode: 'linear',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
@@ -396,7 +429,7 @@
 
 			function handleClick(e) {
 				e.preventDefault();
-				if(e.button === 0) Reveal.next(); 
+				if(e.button === 0) Reveal.nextFragment(); 
 				if(e.button === 2) Reveal.prev(); 
 			}
 
