@@ -172,13 +172,13 @@
 					</section>
 
 					<section id="training2">
-						<p>
+						<p class="r-fit-text">
 							I went to the kitchen to grab a <b style="color: red;">spolter</b>.
 						</p>
 					</section>
 				
 					<section id="training3">
-						<p>
+						<p class="r-fit-text">
 							As I was pressing oranges, <b style="color: red;">spolter</b> fell out of my hand.
 						</p>
 					</section>
@@ -405,6 +405,12 @@
 					<img src="images/avocado_chair.jpg">
 				</section>
 
+				<section data-background="images/hal9000.jpg" data-transition="concave">
+					<br />
+					<br />
+					<b style="text-shadow: 2px 2px black;">thank you</b>
+				</section>
+
 			</div>
 		</div>
 
@@ -429,7 +435,7 @@
 
 			function handleClick(e) {
 				e.preventDefault();
-				if(e.button === 0) Reveal.next();
+				if(e.button === 0) Reveal.next(); 
 				if(e.button === 2) Reveal.prev(); 
 			}
 
